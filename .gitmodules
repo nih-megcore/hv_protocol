@@ -1,0 +1,3 @@
+[submodule "imaging_data_prep_scripts/hv_proc"]
+	path = imaging_data_prep_scripts/hv_proc
+	url = https://github.com/nih-megcore/hv_proc
