@@ -1,0 +1,101 @@
+# Set up the control port (0x353).  Writing this value (136)
+# configures the correct ports as input and output.
+# It has to stay on.
+memory_device control_port = new memory_device(851, 1);
+control_port.write_byte(136, 1);
+
+# The trigger port (0x350) is configured in the Hardware
+# Settings tab as port 1.
+output_port trigger_port = output_port_manager.get_port(1);
+
+# Trigger pulses are always 25 msec.
+trigger_port.set_pulse_width(25); 
+
+# Call this to write an 8 bit code to the STIM channel
+sub trigger(int code) begin
+   trigger_port.send_code(code);
+end;
+
+# Simple timing routine.
+sub wait(int duration) begin
+   int end_time = clock.time() + duration;
+   loop until clock.time() >= end_time begin end;
+end;
+
+# Get the name of the file defining the ordering.
+# 338 seconds
+int practice = 0;
+preset string filename;
+if filename == "" then
+   filename = "5";
+	practice = 1;
+end;
+filename = "3stimoddlist_" + filename + ".txt";
+
+# Read the ordering.
+array<int> stim[1000];
+array<int> isi[1000];
+int N = 0;
+
+input_file in = new input_file;
+in.open(filename);
+
+loop until false begin
+   int i;
+
+   i = in.get_int();
+   if (in.end_of_file()) then break end;
+   N = N + 1;
+   stim[N] = i;
+   i = in.get_int();
+   isi[N] = i;
+end;
+in.close();
+
+# Display task instructions.
+if (practice == 1) then
+	practice_trial.present();
+else
+	instruction_trial.present();
+
+	# Display localizer prompt and wait.
+	localize_trial.present();
+end;
+
+# Display the fixation mark.
+default.present();
+
+# Display the fixation mark for a little while.
+wait(2000);
+
+# Trigger collection early so we get some pre-stim.
+trigger(128);
+wait(1000);
+
+loop int i = 1 until i > N begin
+   int j; int k;
+
+   j = stim[i];
+   #k = isi[i] / 4 + 1500;
+   k = isi[i];
+   # Write the port code and play the appropriate tone.
+   trigger(j);
+   if j == 1 then
+      std.present();
+      # FWC original: duration of tone + isi 
+		# ACN modified so that instead of ISI, K is ITI
+		# or rate of presentation
+      wait(k);
+   elseif j == 2 then
+      targ.present();
+      wait(k);
+	else
+		white.present();
+		wait(k);
+   end;
+	
+	i = i + 1;
+end;
+
+localize_trial.present();
+done_trial.present();

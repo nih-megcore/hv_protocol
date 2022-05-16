@@ -1,0 +1,46 @@
+# Include the MEG system definitions.
+
+include "C:/WINDOWS/Desktop/Standard/MEG.pcl";
+
+# Get the name of the file defining the ordering.
+string filename = "mmfisi.txt";
+
+# Read the ordering.
+array<int> isi[1000];
+array<int> stim[1000];
+int N = 0;
+
+input_file in = new input_file;
+in.open(filename);
+
+loop until false begin
+   int i;
+
+   i = in.get_int();
+   if (in.end_of_file()) then break end;
+   N = N + 1;
+   isi[N] = i;
+   i = in.get_int();
+   stim[N] = i;
+end;
+in.close();
+
+# Display localizer prompt and wait.
+localize_trial.present();
+
+# Display the fixation mark, and trigger Acq.
+default.present();
+wait(1000);
+trigger(128);
+wait(1000);
+
+loop int i = 1 until i > N begin
+   trigger(stim[i]);
+   st_stim.set_port_code(stim[i]);
+   stim_trial.set_duration(isi[i]);
+   stim_trial.present();
+   i = i + 1;
+end;
+
+localize_trial.present();
+done_trial.present();

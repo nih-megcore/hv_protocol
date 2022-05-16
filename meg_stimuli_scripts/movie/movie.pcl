@@ -1,0 +1,15 @@
+include "C:/WINDOWS/Desktop/Standard/MEG.pcl";
+
+# Display localizer prompt and wait.
+localize_trial.present();
+
+# Trigger Acq.
+
+default.present();
+wait(1000);
+trigger(128);
+wait(1000);
+
+movie.present();
+
+done_trial.present();
