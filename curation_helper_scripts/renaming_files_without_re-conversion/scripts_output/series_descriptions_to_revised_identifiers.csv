@@ -1,5 +1,5 @@
 original_series_description,modified_series_description,revised_common_identifiers
-Accelerated Sagittal IR-FSPGR,Accelerated_Sagittal_IR-FSPGR,_acq-fspgr_rec-SCIC_T1w
+Accelerated Sagittal IR-FSPGR,Accelerated_Sagittal_IR-FSPGR,_acq-FSPGR_rec-SCIC_T1w
 ADNI2 2D FLAIR,ADNI2_2D_FLAIR,_acq-2dADNI2_rec-SCIC_FLAIR
 Anat T1w MP-RAGE 1mm (ABCD),Anat_T1w_MP-RAGE_1mm_ABCD,_acq-MPRAGE_rec-SCIC_T1w
 Anat T2w CUBE (ABCD),Anat_T2w_CUBE_ABCD,_acq-CUBE_rec-SCIC_T2w
@@ -28,14 +28,14 @@ B0 Map - DTI,B0_Map_-_DTI,_acq-dwi_fieldmap
 B0 Map - rsfMRI - RKV,B0_Map_-_rsfMRI_-_RKV,_acq-bold_fieldmap
 B0 Map - rsfMRI,B0_Map_-_rsfMRI,_acq-bold_fieldmap
 HighResHippo,HighResHippo,_acq-HighResHippo_T1w
-Optional - Anat T2w CUBE FLAIR,Optional_-_Anat_T2w_CUBE_FLAIR,_acq-3d_rec-SCIC_FLAIR
+Optional - Anat T2w CUBE FLAIR,Optional_-_Anat_T2w_CUBE_FLAIR,_acq-3dCUBE_rec-SCIC_FLAIR
 Optional - Sagittal 3D FLAIR,Optional_-_Sagittal_3D_FLAIR,_acq-Sagittal3d_rec-SCIC_FLAIR
 ORIG ADNI2 2D FLAIR,ORIG_ADNI2_2D_FLAIR,_acq-2dADNI2_FLAIR
 ORIG Anat T1w MP-RAGE 1mm (ABCD),ORIG_Anat_T1w_MP-RAGE_1mm_ABCD,_acq-MPRAGE_T1w
 ORIG Anat T2w CUBE (ABCD),ORIG_Anat_T2w_CUBE_ABCD,_acq-CUBE_T2w
 ORIG Axial T2 2D FLAIR ADNI2,ORIG_Axial_T2_2D_FLAIR_ADNI2,_acq-2dADNI2_FLAIR
-ORIG Optional - Anat T2w CUBE FLAIR,ORIG_Optional_-_Anat_T2w_CUBE_FLAIR,_acq-3d_FLAIR
+ORIG Optional - Anat T2w CUBE FLAIR,ORIG_Optional_-_Anat_T2w_CUBE_FLAIR,_acq-3dCUBE_FLAIR
 ORIG Sag_MPRAGE_T1,ORIG_Sag_MPRAGE_T1,_acq-SagittalMPRAGE_T1w
-PURE MP-RAGE 1mm,PURE_MP-RAGE_1mm,_acq-PureMPRAGE-rec_scic_T1w
-Sag_CUBE_T2,Sag_CUBE_T2,_acq-SagittalCUBE_T2w
+PURE MP-RAGE 1mm,PURE_MP-RAGE_1mm,_acq-MPRAGE-rec_SCIC_T1w
+Sag_CUBE_T2,Sag_CUBE_T2,_acq-CUBE_T2w
 Sagittal 3D FLAIR,Sagittal_3D_FLAIR,_acq-Sagittal3d_rec-SCIC_FLAIR
