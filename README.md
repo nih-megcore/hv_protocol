@@ -113,7 +113,7 @@ The `01_cris_clean_up.py` python script contains the functions used to clean and
 
 ### Clinical Measures Data
 
-The `02_ctdb_clean_up.py` python script contains the functions used to clean and convert the spreadsheet downloaded from CTDB, the database used by the study team, to BIDS-standard TSV files as well as their respective data dictionaries converted to BIDS-standard JSON files.
+The `02_ctdb_clean_up.py` python script contains the functions used to clean and convert the spreadsheet downloaded from CTDB (the database used by the study team) to BIDS-standard TSV files as well as their respective data dictionaries converted to BIDS-standard JSON files.
 
 Some python functions common to both scripts were defined in `rvoldefinitions.py`
 
