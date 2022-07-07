@@ -21,8 +21,9 @@ Study participants are recruited through direct mailings, bulletin boards and li
 
 ## Clinical Measures
 
-All potential volunteers first visit the study website ([https://nimhresearchvolunteer.ctss.nih.gov](https://nimhresearchvolunteer.ctss.nih.gov)), check a box indicating consent, and complete preliminary self-report screening questionnaires. The study website is HIPAA compliant and therefore does not collect Personally Identifiable Information (PII) ; instead, participants are instructed to contact the study team to provide their identity and contact information. The questionnaires include 
-- Demographics, 
+All potential volunteers first visit the study website ([https://nimhresearchvolunteer.ctss.nih.gov](https://nimhresearchvolunteer.ctss.nih.gov)), check a box indicating consent, and complete preliminary self-report screening questionnaires. The study website is HIPAA compliant and therefore does not collect Personally Identifiable Information (PII) ; instead, participants are instructed to contact the study team to provide their identity and contact information. The questionnaires include:
+
+- Demographics
 - Clinical history including medications
 - Disability status (WHODAS 2.0)
 - Mental health symptoms (modified DSM-5 Self-Rated Level 1 Cross-Cutting Symptom Measure) 
@@ -44,6 +45,7 @@ Medical evaluation includes medical history elicitation and systematic review of
 ## MRI Scan
 
 Participants who were determined to be eligible for inclusion as healthy research volunteers based on the in-person assessment are given the option to consent for a magnetic resonance imaging (MRI) scan, which can serve as a baseline clinical scan to determine normative brain structure, and also as a research scan with the addition of functional sequences (resting state and diffusion tensor imaging). The MR protocol used was initially based on the ADNI-3 basic protocol, but was later modified to include portions of the ABCD protocol. Because there may be small changes in parameters from the standard ABCD/ADNI3 sequences, detailed sequence descriptions are shared in some_directory. Additional images collected with parameters inconsistent with the primary dataset are shared in the sourcedata directory with detailed .json files so that investigators can include them at their discretion. Scan types are as follows:
+
 - The T1 scan from ADNI3 (fSPGR) was acquired in 59 participants, while the T1 scan from ABCD (MPRAGE) was acquired in 89 participants.
 - The 2D FLAIR sequence from ADNI2 was acquired in 141 participants.
 - The 3D FLAIR sequence from ADNI3 was altered to match the resolution and geometry of the T1 scan, and was acquired in 36 participants (this scan was optional)
