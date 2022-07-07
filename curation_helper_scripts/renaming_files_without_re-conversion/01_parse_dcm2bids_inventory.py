@@ -11,9 +11,9 @@ def parse_arguments():
                                                  "These files contain a list of scan names associated with "
                                                  "the series description.")
 
-    parser.add_argument("--input_dir", type=Path, action='store', dest='inputdir', help="Path to input directory.")
-    parser.add_argument("--output_dir", type=Path, action='store', dest='outdir', help="Path to output directory.")
-    parser.add_argument("--series_desc_list", type=Path, action='store', dest='outdir', help="Path to output directory.")
+    parser.add_argument("-i", "--input-dir", type=Path, action='store', dest='inputdir', metavar='INPUT', help="Path to input directory.")
+    parser.add_argument("-o", "--output-dir", type=Path, action='store', dest='outdir', metavar='OUTPUT', help="Path to output directory.")
+    parser.add_argument("-s", "--series-desc-list", type=Path, action='store', dest='outdir', metavar='FILE', help="Path to series description list file.")
 
     return parser.parse_args()
 
