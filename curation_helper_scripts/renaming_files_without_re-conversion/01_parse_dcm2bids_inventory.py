@@ -12,12 +12,18 @@ def parse_arguments():
                                                  "These files contain a list of scan names associated with "
                                                  "the series description.")
 
+<<<<<<< HEAD
     parser.add_argument("-i", "--input-dir", type=Path, action='store', dest='inputdir', metavar='INPUT',
                         help="Path to input directory with current filenames.")
     parser.add_argument("-o", "--output-dir", type=Path, action='store', dest='outdir', metavar='OUTPUT',
                         help="Path to directory where outputs of this script will be stored.")
     parser.add_argument("-s", "--series-desc-list", type=Path, action='store', dest='series_desc_file', metavar='FILE',
                         help="Path to series description list file.")
+=======
+    parser.add_argument("-i", "--input-dir", type=Path, action='store', dest='inputdir', metavar='INPUT', help="Path to input directory.")
+    parser.add_argument("-o", "--output-dir", type=Path, action='store', dest='outdir', metavar='OUTPUT', help="Path to output directory.")
+    parser.add_argument("-s", "--series-desc-list", type=Path, action='store', dest='outdir', metavar='FILE', help="Path to series description list file.")
+>>>>>>> 7aeaacde3a652257995c34ecc308bb0aaeb04187
 
     args = parser.parse_args()
 
