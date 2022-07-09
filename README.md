@@ -40,7 +40,7 @@ At this visit, participants undergo a comprehensive clinical evaluation to deter
 
 ## Medical Evaluation
 
-Medical evaluation includes medical history elicitation and systematic review of systems. Biological and physiological measures include vital signs (blood pressure, pulse), as well as weight, height, and BMI. Blood and urine samples are taken and a complete blood count, acute care panel, hepatic panel, thyroid stimulating hormone, viral markers (HCV, HBV, HIV), C-reactive protein, creatine kinase, urine drug screen and urine pregnancy tests are performed. In addition, blood samples that can be used for future genomic analysis, development of lymphoblastic cell lines or other biomarker measures are collected and banked with the NIMH Repository and Genomics Resource (Infinity BiologiX). Any future assessments on stored samples will be shared as they are available. The Family Interview for Genetic Studies (FIGS) was later added to the assessment in order to provide better pedigree information; the Adverse Childhood Events (ACEs) survey was also added to better characterize potential risk factors for psychopathology. The entirety of the in-person assessment not only collects information relevant for eligibility determination, but it also provides a comprehensive set of standardized clinical measures of volunteer health that can be used for secondary research.
+Medical evaluation includes medical history elicitation and systematic review of systems. Biological and physiological measures include vital signs (blood pressure, pulse), as well as weight, height, and BMI. Blood and urine samples are taken and a complete blood count, acute care panel, hepatic panel, thyroid stimulating hormone, viral markers (HCV, HBV, HIV), C-reactive protein, creatine kinase, urine drug screen and urine pregnancy tests are performed. Few participants have hematalogy, infectious_disease, lipid, urinalysis, and vitamin level test data included. In addition, blood samples that can be used for future genomic analysis, development of lymphoblastic cell lines or other biomarker measures are collected and banked with the NIMH Repository and Genomics Resource (Infinity BiologiX). Any future assessments on stored samples will be shared as they are available. The Family Interview for Genetic Studies (FIGS) was later added to the assessment in order to provide better pedigree information; the Adverse Childhood Events (ACEs) survey was also added to better characterize potential risk factors for psychopathology. The entirety of the in-person assessment not only collects information relevant for eligibility determination, but it also provides a comprehensive set of standardized clinical measures of volunteer health that can be used for secondary research.
 
 ## MRI Scan
 
@@ -135,19 +135,19 @@ The `imaging_data_prep_scripts` directory contains scripts and files used to pro
 
 Below is a BIDS-compliant file/folder tree as it appears for subjects on OpenNeuro.
 
-```shell
+```bash
 sub-ON<subject>
     └── ses-01
         ├── anat
-        │   └── sub-ON<subject>_ses-01_acq-<desc>_run-<index>_<suffix>.<json|nii.gz>
-        ├── asl
-        │   └── sub-ON<subject>_ses-01_run-<index>_asl.<json|nii.gz>
+        │   └── sub-ON<subject>_ses-01_acq-<desc>_[run-<index>]_<suffix>.<json|nii.gz>
+        ├── perf
+        │   └── sub-ON<subject>_ses-01_asl.<json|nii.gz>
         ├── dwi
-        │   └── sub-ON<subject>_ses-01_run-<index>_dwi.<bvec|bval|json|nii.gz>
+        │   └── sub-ON<subject>_ses-01_dwi.<bvec|bval|json|nii.gz>
         ├── fmap
-        │   └── sub-ON<subject>_ses-01_acq-<desc>_dir-<direction>_run-<index>_epi.<bvec|bval|json|nii.gz>
+        │   └── sub-ON<subject>_ses-01_acq-<desc>_<fieldmap|magnitude>.<json|nii.gz>
         ├── func
-        │   └── sub-ON<subject>_ses-01_task-<taskname>_run-<index>_<suffix>.<json|nii.gz>
+        │   └── sub-ON<subject>_ses-01_task-<taskname>_<suffix>.<json|nii.gz>
         ├── meg
         │   ├── sub-ON<subject>_ses-01_task-<taskname>_run-01_<meg|coordsystem>.json
         │   ├── sub-ON<subject>_ses-01_task-<taskname>_run-01_<channels|events>.tsv
@@ -173,8 +173,8 @@ Definitions:
 - `<suffix>` = placeholder to indicate the scan type
   - `T1w`: `<desc>` = `MPRAGE`, `FSPGR`, `HighResHippo`
   - `T2w`: `<desc>` = `CUBE`
-  - `FLAIR`: `<desc>` = `2dADNI2`, `2d`, `3d`
-  - `epi`: `<desc>` = `dwib1000`, `dwi`, `resting`
+  - `FLAIR`: `<desc>` = `2dADNI2`, `3dCUBE`
+  - `fieldmap` & `magnitude`: `<desc>` = `bold`, `dwi`
   - `T2starw`
   - `bold`
   - `meg`
