@@ -1,7 +1,8 @@
-from pathlib import Path
+import argparse
+import os
 import re
 import subprocess
-import argparse
+from pathlib import Path
 
 import pandas as pd
 
@@ -11,11 +12,21 @@ def parse_arguments():
                                                  "These files contain a list of scan names associated with "
                                                  "the series description.")
 
-    parser.add_argument("--input_dir", type=Path, action='store', dest='inputdir', help="Path to input directory.")
-    parser.add_argument("--output_dir", type=Path, action='store', dest='outdir', help="Path to output directory.")
-    parser.add_argument("--series_desc_list", type=Path, action='store', dest='outdir', help="Path to output directory.")
+    parser.add_argument("-i", "--input-dir", type=Path, action='store', dest='inputdir', metavar='INPUT',
+                        help="Path to input directory with current filenames.")
+    parser.add_argument("-o", "--output-dir", type=Path, action='store', dest='outdir', metavar='OUTPUT',
+                        help="Path to directory where outputs of this script will be stored.")
+    parser.add_argument("-s", "--series-desc-list", type=Path, action='store', dest='series_desc_file', metavar='FILE',
+                        help="Path to series description list file.")
 
-    return parser.parse_args()
+    args = parser.parse_args()
+
+    # converting relative to absolute paths
+    inputdir = Path(os.path.abspath(args.inputdir))
+    outdir = Path(os.path.abspath(args.outdir))
+    series_desc_file = Path(os.path.abspath(args.series_desc_file))
+
+    return inputdir, outdir, series_desc_file
 
 
 def run_shell_cmd(cmdstr):
@@ -25,30 +36,33 @@ def run_shell_cmd(cmdstr):
 
 
 def main():
-    root = Path('/Users/arshitha/Desktop/OneDesk/Projects/17M081_June_2022')  # directory with bids formatted data and code files
-    data = root.joinpath('17M081_jsons')  # bids dataset
-    series_descriptions = root.joinpath('all_series_descriptions.txt')  # file with list of all unique series descriptions
+    inputdir, outdir, series_desc_file = parse_arguments()
+    data = Path(os.path.abspath('data/series_description_groups'))
+    if not data.exists():
+        data.mkdir(parents=True)
 
-    # hardcoded
-    desc_with_orig = ['ADNI2 2D FLAIR', 'Anat T1w MP-RAGE 1mm (ABCD)', 'Anat T2w CUBE (ABCD)', 'Axial T2 2D FLAIR ADNI2', 'Optional - Anat T2w CUBE FLAIR','Sag_MPRAGE_T1']
-    desc_with_optional = ['Sagittal 3D FLAIR']
-    desc_list = pd.read_csv(series_descriptions, sep='\n', header=None)[0].to_list()
+    desc_list = pd.read_csv(series_desc_file, sep='\n', header=None)[0].to_list()
 
     cmds_list = []
     for description in desc_list:
+        # description is modified to exclude parenthesis and joined by '_' char
+        # eg "Axial rsfMRI (Eyes Open)" becomes "Axial_rsfMRI_Eyes_Open"
         modified_description = re.sub(r"[\([{})\]]", "", description)
-        outfile = '_'.join(modified_description.split())+'.txt'
-        bash_cmd = f"for i in `find . -name '*.json'`; do grep -wH \"\\\"SeriesDescription\\\": \\\"{description}\\\"\" $i; done | sed 's|.json:    \"SeriesDescription\": \"{description}\",||g' > {outfile}"
-        cmds_list.append(bash_cmd)
-        print(bash_cmd+'\n')
+        modified_description = '_'.join(modified_description.split())
 
-    with open('17M081_jsons/separate_out_filenames_based_on_series_descriptions.sh', 'w') as f:
+        # writes out bids files having a particular series description to a text file with series description as its
+        # filename
+        outfile = data.joinpath(modified_description + '.txt')
+        bash_cmd = f"for i in `find {inputdir} -name '*.json'`; do grep -wH \"\\\"SeriesDescription\\\": \\\"{description}\\\"\" $i; done | sed 's|.json:    \"SeriesDescription\": \"{description}\",||g' > {outfile}"
+        cmds_list.append(bash_cmd)
+        print(bash_cmd + '\n')
+
+    with open(outdir.joinpath('separate_out_filenames_based_on_series_descriptions.sh'), 'w') as f:
         for cmd in cmds_list:
-            f.write(cmd+'\n')
+            f.write(cmd + '\n')
 
     return None
 
 
 if __name__ == "__main__":
     main()
-

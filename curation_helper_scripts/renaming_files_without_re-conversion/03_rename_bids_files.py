@@ -8,9 +8,11 @@ import pandas as pd
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Does something worth doing.")
 
-    parser.add_argument("--input_dir", type=Path, action='store', dest='inputdir', help="Path to input directory.")
-    parser.add_argument("--output_dir", type=Path, action='store', dest='outdir', help="Path to output directory.")
-    parser.add_argument("--mapping_file", type=Path, action='store', dest='mapping_file',
+    parser.add_argument("-i", "--input-dir", type=Path, action='store', dest='inputdir',
+                        help="Path to input directory.")
+    parser.add_argument("-o", "--output-dir", type=Path, action='store', dest='outdir',
+                        help="Path to output directory.")
+    parser.add_argument("-m", "--mapping-file", type=Path, action='store', dest='mapping_file',
                         help="Path to mapping file.")
     args = parser.parse_args()
     return args.inputdir, args.outdir, args.mapping_file
@@ -45,7 +47,7 @@ def main():
         outdir.mkdir(parents=True)
 
     # copy over input directory contents to output directory
-    run_shell_cmd(f"rsync -avP {inputdir}/ {outdir}/ ;")
+    run_shell_cmd(f"rsync -avP {inputdir}/ {outdir} ;")
 
     # load mapping file
     old_to_new_map_df = pd.read_csv(mapping_file)

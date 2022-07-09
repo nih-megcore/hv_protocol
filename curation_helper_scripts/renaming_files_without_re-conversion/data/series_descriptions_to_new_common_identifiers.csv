@@ -14,7 +14,7 @@ Axial DTI 24vols flipped,Axial_DTI_24vols_flipped,_dir-unflipped_dwi
 Axial DTI B 1000 - RKV,Axial_DTI_B_1000_-_RKV,_dir-flipped_dwi
 Axial DTI B 1000,Axial_DTI_B_1000,_dir-flipped_dwi
 Axial DTI B=1000,Axial_DTI_B=1000,_dir-flipped_dwi
-Axial DTI,Axial_DTI,_acq-flipped_dwi
+Axial DTI,Axial_DTI,_dir-flipped_dwi
 Axial fMRI reverse blip,Axial_fMRI_reverse_blip,_task-rest_dir-reverse_bold
 Axial rsfMRI (Eyes Open),Axial_rsfMRI_Eyes_Open,_task-rest_dir-forward_bold
 Axial rsfMRI reverse blip - RKV,Axial_rsfMRI_reverse_blip_-_RKV,_task-rest_dir-reverse_bold
@@ -36,6 +36,6 @@ ORIG Anat T2w CUBE (ABCD),ORIG_Anat_T2w_CUBE_ABCD,_acq-CUBE_T2w
 ORIG Axial T2 2D FLAIR ADNI2,ORIG_Axial_T2_2D_FLAIR_ADNI2,_acq-2dADNI2_FLAIR
 ORIG Optional - Anat T2w CUBE FLAIR,ORIG_Optional_-_Anat_T2w_CUBE_FLAIR,_acq-3dCUBE_FLAIR
 ORIG Sag_MPRAGE_T1,ORIG_Sag_MPRAGE_T1,_acq-SagittalMPRAGE_T1w
-PURE MP-RAGE 1mm,PURE_MP-RAGE_1mm,_acq-MPRAGE-rec_SCIC_T1w
+PURE MP-RAGE 1mm,PURE_MP-RAGE_1mm,_acq-MPRAGE_rec-SCIC_T1w
 Sag_CUBE_T2,Sag_CUBE_T2,_acq-CUBE_T2w
 Sagittal 3D FLAIR,Sagittal_3D_FLAIR,_acq-Sagittal3d_rec-SCIC_FLAIR

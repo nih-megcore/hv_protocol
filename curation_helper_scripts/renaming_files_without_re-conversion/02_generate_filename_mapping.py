@@ -1,5 +1,6 @@
 import argparse
 import csv
+import os
 import re
 import subprocess
 from pathlib import Path
@@ -9,13 +10,26 @@ import pandas as pd
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description="Does something worth doing.")
+    parser = argparse.ArgumentParser(description="Creates text files with each series description as the filename. "
+                                                 "These files contain a list of scan names associated with "
+                                                 "the series description.")
 
-    parser.add_argument("--input_dir", type=Path, action='store', dest='inputdir', help="Path to input directory.")
-    parser.add_argument("--output_dir", type=Path, action='store', dest='outdir', help="Path to output directory.")
+    parser.add_argument("-i", "--input-dir", type=Path, action='store', dest='inputdir', metavar='INPUT',
+                        help="Path to input BIDS directory with current filenames.")
+    parser.add_argument("-o", "--output-dir", type=Path, action='store', dest='outdir', metavar='OUTPUT',
+                        help="Path to directory where outputs of this script will be stored.")
+    parser.add_argument("-s", "--series-desc-to-filenames", type=Path, action='store', dest='series_to_files',
+                        metavar='FILE', help="Path to directory with text files named after unique series descriptions \
+                        that has a list of filepaths associated with that particular series description.")
 
     args = parser.parse_args()
-    return args.inputdir, args.outdir
+
+    # converting relative to absolute paths
+    inputdir = Path(os.path.abspath(args.inputdir))
+    series_to_files = Path(os.path.abspath(args.series_to_files))
+    outdir = Path(os.path.abspath(args.outdir))
+
+    return inputdir, series_to_files, outdir
 
 
 def run_shell_cmd(cmdstr):
@@ -25,11 +39,9 @@ def run_shell_cmd(cmdstr):
 
 
 def main():
-    inputdir, outdir = parse_arguments()
-    json_data = inputdir.joinpath('data/17M081_jsons')
-
-    series_descriptions = inputdir.joinpath('data/all_series_descriptions.txt')
-    series_filenames = list(json_data.joinpath('series_to_filenames').glob('*.txt'))
+    inputdir, series_to_files, outdir = parse_arguments()
+    data_dir = Path(os.path.abspath('data'))
+    series_filenames = list(series_to_files.glob('*.txt'))
 
     df_columns = ['original_series_description', 'modified_series_description', 'current_bids_filename',
                   'revised_common_identifiers', 'revised_bids_filename']
@@ -37,15 +49,23 @@ def main():
     idx = 0
     for series_filename in series_filenames:
         desc = series_filename.name.split('.')[0]
+        print(desc)
         f = open(series_filename, 'r')
         for line in f.readlines():
-            df.at[idx, 'current_bids_filename'] = line.strip().split('./')[1]
+            filepath = Path(line.strip())
+            abs_path_parts = filepath.parts
+
+            for i, v in enumerate(abs_path_parts):
+                if v == inputdir.name:
+                    startidx = i + 1
+
+            rel_filepath = '/'.join(abs_path_parts[startidx:])
+            df.at[idx, 'current_bids_filename'] = rel_filepath
             df.at[idx, 'modified_series_description'] = desc
             idx += 1
 
-    series_to_identifier_df = pd.read_csv(inputdir.joinpath('data/series_descriptions_to_new_common_identifiers.csv'))
-    series_to_identifier_df.to_csv(outdir.joinpath('series_descriptions_to_revised_identifiers.csv'),
-                                   quoting=csv.QUOTE_MINIMAL, index=False)
+    # series description to unique identifier mapping file
+    series_to_identifier_df = pd.read_csv(data_dir.joinpath('series_descriptions_to_new_common_identifiers.csv'))
 
     grouped_df = df.groupby(by=['modified_series_description'])
     unique_series_desc = grouped_df.groups.keys()
@@ -53,7 +73,9 @@ def main():
         for idx in grouped_df.groups[series_desc]:
             curr_filename = df.at[idx, 'current_bids_filename']
             prefix = '_'.join(curr_filename.split('_')[:2])
+            print(prefix)
             entities = re.split('/|_', curr_filename)
+
             df.at[idx, 'original_series_description'] = series_to_identifier_df.loc[series_to_identifier_df[
                                                                                         'modified_series_description'] == series_desc, 'original_series_description'].values[
                 0]
@@ -95,7 +117,7 @@ def main():
             with_json_new_to_old_df.at[idx, 'revised_bids_filename'] = with_json_new_to_old_df.at[
                                                                            idx, 'revised_bids_filename'] + '.json'
 
-    with_json_new_to_old_df.to_csv('scripts_output/old_to_new_bids_filename_mapping.csv', quoting=csv.QUOTE_MINIMAL,
+    with_json_new_to_old_df.to_csv(outdir.joinpath('old_to_new_bids_filename_mapping.csv'), quoting=csv.QUOTE_MINIMAL,
                                    index=False)
 
     return None
