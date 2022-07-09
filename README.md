@@ -125,7 +125,7 @@ Data collected by the NIMH MEG Core was converted to BIDS-standard files using t
 
 ### BIDS-standard MRI
 
-We used the [dcm2bids](https://github.com/UNFmontreal/Dcm2Bids) tool to convert MRI DICOM files to BIDS-standard files. To preserve subject privacy, structural MRI scans are defaced using To preserve subject privacy, structural MRI scans are defaced using [AFNI Refacer version 2.31](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/tutorials/refacer/refacer_run.html) and defaced scans were checked for quality using [VisualQC v0.6](https://github.com/raamana/visualqc).
+We used [dcm2bids v2.1.6](https://github.com/UNFmontreal/Dcm2Bids/releases/tag/2.1.6) tool, a wrapper built on [dcm2niix v1.0.20211006](https://github.com/rordenlab/dcm2niix/releases/tag/v1.0.20211006), to convert MRI DICOM files to BIDS-standard files. To preserve subject privacy, structural MRI scans are defaced using To preserve subject privacy, structural MRI scans are defaced using [AFNI Refacer version 2.31](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/tutorials/refacer/refacer_run.html) and defaced scans were checked for quality using [VisualQC v0.6](https://github.com/raamana/visualqc).
 
 **NOTE** Release 1.0.0 of the dataset contains ASL scans but are *NOT* in BIDS format yet. This will be resolved in future releases.
 
