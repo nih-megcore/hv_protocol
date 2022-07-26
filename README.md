@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/464975691.svg)](https://zenodo.org/badge/latestdoi/464975691)
+
 # The NIMH Healthy Research Volunteer Dataset
 
 A comprehensive clinical, MRI, and MEG collection characterizing healthy research volunteers collected at the National Institute of Mental Health (NIMH) Intramural Research Program (IRP) in Bethesda, Maryland using medical and mental health assessments, diagnostic and dimensional measures of mental health, cognitive and neuropsychological functioning, structural and functional magnetic resonance imaging (MRI), along with diffusion tensor imaging (DTI), and a comprehensive magnetoencephalography battery (MEG).
