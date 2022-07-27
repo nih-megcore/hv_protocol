@@ -1,0 +1,2 @@
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON48555/ses-01/anat/sub-ON48555_ses-01_acq-highreshippo_T1w
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON84478/ses-01/anat/sub-ON84478_ses-01_acq-highreshippo_T1w

@@ -1,0 +1,2 @@
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON65697/ses-01/dwi/sub-ON65697_ses-01_dir-unflipped_dwi
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON72409/ses-01/dwi/sub-ON72409_ses-01_dir-unflipped_dwi

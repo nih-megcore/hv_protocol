@@ -1,0 +1,9 @@
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON01016/ses-01/dwi/sub-ON01016_ses-01_dir-flipped_dwi
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON23897/ses-01/dwi/sub-ON23897_ses-01_dir-flipped_dwi
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON28693/ses-01/dwi/sub-ON28693_ses-01_dir-flipped_dwi
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON40397/ses-01/dwi/sub-ON40397_ses-01_dir-flipped_dwi
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON40757/ses-01/dwi/sub-ON40757_ses-01_dir-flipped_dwi
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON66557/ses-01/dwi/sub-ON66557_ses-01_dir-flipped_dwi
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON93016/ses-01/dwi/sub-ON93016_ses-01_dir-flipped_dwi
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON94663/ses-01/dwi/sub-ON94663_ses-01_dir-flipped_dwi
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON99299/ses-01/dwi/sub-ON99299_ses-01_dir-flipped_dwi

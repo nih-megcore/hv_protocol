@@ -1,0 +1,40 @@
+Accelerated Sagittal IR-FSPGR
+ORIG Anat T1w MP-RAGE 1mm (ABCD)
+Anat T1w MP-RAGE 1mm (ABCD)
+ORIG Sag_MPRAGE_T1
+PURE MP-RAGE 1mm
+Ax T2 FLAIR
+Axial T2 2D FLAIR
+Axial T2 2D FLAIR ADNI2
+ORIG Axial T2 2D FLAIR ADNI2
+ADNI2 2D FLAIR
+ORIG ADNI2 2D FLAIR
+ORIG Optional - Anat T2w CUBE FLAIR
+Optional - Anat T2w CUBE FLAIR
+Optional - Sagittal 3D FLAIR
+Sagittal 3D FLAIR
+ORIG Anat T2w CUBE (ABCD)
+Anat T2w CUBE (ABCD)
+Sag_CUBE_T2
+Axial T2 Star
+Axial T2 Star (Rx 2D FLAIR)
+Axial 3D pCASL (Eyes Open)
+Axial 3D pCASL with Eyes Open
+Axial DTI
+Axial DTI - swap pepolar CV
+Axial DTI 24vols flipped
+Axial DTI 24dirs flipped
+Axial DTI 24dir flipped
+Axial DTI B=1000
+Axial DTI B 1000
+Axial DTI 24dirs flipped - RKV
+Axial DTI B 1000 - RKV
+Axial rsfMRI (Eyes Open)
+Axial fMRI reverse blip
+Axial rsfMRI with Eyes Open - RKV
+Axial rsfMRI reverse blip - RKV
+B0 Map - DTI
+B0 Map - DTI - RKV
+B0 Map - rsfMRI
+B0 Map - rsfMRI - RKV
+HighResHippo

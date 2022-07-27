@@ -1,0 +1,2 @@
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON05258/ses-01/anat/sub-ON05258_ses-01_acq-mprage-rec_scic_T1w
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-mprage_rec-scic_T1w
