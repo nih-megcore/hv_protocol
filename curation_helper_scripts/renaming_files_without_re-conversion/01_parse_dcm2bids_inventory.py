@@ -22,9 +22,9 @@ def parse_arguments():
     args = parser.parse_args()
 
     # converting relative to absolute paths
-    inputdir = Path(os.path.abspath(args.inputdir))
-    outdir = Path(os.path.abspath(args.outdir))
-    series_desc_file = Path(os.path.abspath(args.series_desc_file))
+    inputdir = Path(args.inputdir).resolve()
+    outdir = Path(args.outdir).resolve()
+    series_desc_file = Path(args.series_desc_file).resolve()
 
     return inputdir, outdir, series_desc_file
 

@@ -1,0 +1,445 @@
+{
+  "descriptions": [
+    {
+      "dataType": "anat",
+      "modalityLabel": "T1w",
+      "customLabels": "acq-fspgr_rec-scic",
+      "criteria": {
+        "SeriesDescription": "Accelerated Sagittal IR-FSPGR"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "T1w",
+      "customLabels": "acq-mprage",
+      "criteria": {
+        "SeriesDescription": "ORIG Anat T1w MP-RAGE 1mm (ABCD)"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "T1w",
+      "customLabels": "acq-mprage_rec-scic",
+      "criteria": {
+        "SeriesDescription": "Anat T1w MP-RAGE 1mm (ABCD)"
+      }
+    },
+    {
+      "dataType": "sourcedata/anat",
+      "modalityLabel": "T1w",
+      "customLabels": "acq-highreshippo",
+      "criteria": {
+        "SeriesDescription": "HighResHippo"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "T1w",
+      "customLabels": "acq-SagittalMPRAGE",
+      "criteria": {
+        "SeriesDescription": "ORIG Sag_MPRAGE_T1"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "T1w",
+      "customLabels": "acq-SagittalMPRAGE_rec-SCIC",
+      "criteria": {
+        "SeriesDescription": "Sag_MPRAGE_T1"
+      }
+    },
+    {
+      "dataType": "sourcedata/anat",
+      "modalityLabel": "T1w",
+      "customLabels": "acq-mprage_rec-scic",
+      "criteria": {
+        "SeriesDescription": "PURE MP-RAGE 1mm"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-2d_rec-scic",
+      "criteria": {
+        "SeriesDescription": "Axial T2 2D FLAIR ADNI2"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-2d",
+      "criteria": {
+        "SeriesDescription": "ORIG Axial T2 2D FLAIR ADNI2"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-2d_rec-scic",
+      "criteria": {
+        "SeriesDescription": "ADNI2 2D FLAIR"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-2d",
+      "criteria": {
+        "SeriesDescription": "ORIG ADNI2 2D FLAIR"
+      }
+    },
+    {
+      "dataType": "sourcedata/anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-2d_rec-scic",
+      "criteria": {
+        "SeriesDescription": "Ax T2 FLAIR"
+      }
+    },
+    {
+      "dataType": "sourcedata/anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-2d_rec-scic",
+      "criteria": {
+        "SeriesDescription": "Axial T2 2D FLAIR"
+      }
+    },
+    {
+      "dataType": "sourcedata/anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-2d",
+      "criteria": {
+        "SeriesDescription": "Axial T2  2D FLAIR"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-3d_rec-scic",
+      "criteria": {
+        "SeriesDescription": "Optional - Anat T2w CUBE FLAIR"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-3d",
+      "criteria": {
+        "SeriesDescription": "ORIG Optional - Anat T2w CUBE FLAIR"
+      }
+    },
+    {
+      "dataType": "sourcedata/anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-3d_rec-scic",
+      "criteria": {
+        "SeriesDescription": "Optional - Sagittal 3D FLAIR"
+      }
+    },
+    {
+      "dataType": "sourcedata/anat",
+      "modalityLabel": "FLAIR",
+      "customLabels": "acq-3d_rec-scic",
+      "criteria": {
+        "SeriesDescription": "Sagittal 3D FLAIR"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "T2w",
+      "customLabels": "acq-cube",
+      "criteria": {
+        "SeriesDescription": "Sag_CUBE_T2"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "T2w",
+      "customLabels": "acq-cube",
+      "criteria": {
+        "SeriesDescription": "ORIG Anat T2w CUBE (ABCD)"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "T2w",
+      "customLabels": "acq-cube_rec-scic",
+      "criteria": {
+        "SeriesDescription": "Anat T2w CUBE (ABCD)"
+      }
+    },
+    {
+      "dataType": "anat",
+      "modalityLabel": "T2starw",
+      "customLabels": "rec-scic",
+      "criteria": {
+        "SeriesDescription": "Axial T2 Star"
+      }
+    },
+    {
+      "dataType": "sourcedata/anat",
+      "modalityLabel": "T2starw",
+      "customLabels": "rec-scic",
+      "criteria": {
+        "SeriesDescription": "Axial T2 Star (Rx 2D FLAIR)"
+      }
+    },
+    {
+      "dataType": "perf",
+      "modalityLabel": "asl",
+      "criteria": {
+        "SeriesDescription": "Axial 3D pCASL with Eyes Open",
+        "ImageType": [
+          "DERIVED",
+          "PRIMARY",
+          "ASL",
+          "PERFUSION",
+          "ASL",
+          "REAL"
+        ]
+      }
+    },
+    {
+      "dataType": "sourcedata/perf",
+      "modalityLabel": "asl",
+      "criteria": {
+        "SeriesDescription": "Axial 3D pCASL (Eyes Open)",
+        "ImageType": [
+          "DERIVED",
+          "PRIMARY",
+          "ASL",
+          "PERFUSION",
+          "ASL",
+          "REAL"
+        ]
+      }
+    },
+    {
+      "dataType": "sourcedata/dwi",
+      "modalityLabel": "dwi",
+      "criteria": {
+        "SeriesDescription": "Axial DTI"
+      }
+    },
+    {
+      "dataType": "sourcedata/dwi",
+      "modalityLabel": "dwi",
+      "customLabels": "dir-flipped",
+      "criteria": {
+        "SeriesDescription": "Axial DTI B 1000"
+      }
+    },
+    {
+      "dataType": "dwi",
+      "modalityLabel": "dwi",
+      "customLabels": "dir-flipped",
+      "criteria": {
+        "SeriesDescription": "Axial DTI B 1000 - RKV"
+      }
+    },
+    {
+      "dataType": "sourcedata/dwi",
+      "modalityLabel": "dwi",
+      "customLabels": "dir-flipped",
+      "criteria": {
+        "SeriesDescription": "Axial DTI B=1000"
+      }
+    },
+    {
+      "dataType": "dwi",
+      "modalityLabel": "dwi",
+      "customLabels": "dir-unflipped",
+      "criteria": {
+        "SeriesDescription": "Axial DTI 24dirs flipped - RKV"
+      }
+    },
+    {
+      "dataType": "sourcedata/dwi",
+      "modalityLabel": "dwi",
+      "customLabels": "dir-unflipped",
+      "criteria": {
+        "SeriesDescription": "Axial DTI 24dir flipped"
+      }
+    },
+    {
+      "dataType": "sourcedata/dwi",
+      "modalityLabel": "dwi",
+      "customLabels": "dir-unflipped",
+      "criteria": {
+        "SeriesDescription": "Axial DTI - swap pepolar CV"
+      }
+    },
+    {
+      "dataType": "sourcedata/dwi",
+      "modalityLabel": "dwi",
+      "customLabels": "dir-unflipped",
+      "criteria": {
+        "SeriesDescription": "Axial DTI 24dirs flipped"
+      }
+    },
+    {
+      "dataType": "sourcedata/dwi",
+      "modalityLabel": "dwi",
+      "customLabels": "dir-unflipped",
+      "criteria": {
+        "SeriesDescription": "Axial DTI 24vols flipped"
+      }
+    },
+    {
+      "dataType": "func",
+      "modalityLabel": "bold",
+      "customLabels": "task-rest",
+      "criteria": {
+        "SeriesDescription": "Axial rsfMRI with Eyes Open - RKV"
+      },
+      "sidecarChanges": {
+        "TaskName": "Resting state with eyes open."
+      }
+    },
+    {
+      "dataType": "func",
+      "modalityLabel": "bold",
+      "customLabels": "task-rest_dir-reverse",
+      "criteria": {
+        "SeriesDescription": "Axial rsfMRI reverse blip - RKV"
+      },
+      "sidecarChanges": {
+        "TaskName": "Resting state with reverse blip."
+      }
+    },
+    {
+      "dataType": "sourcedata/func",
+      "modalityLabel": "bold",
+      "customLabels": "task-rest_dir-reverse",
+      "criteria": {
+        "SeriesDescription": "Axial fMRI reverse blip"
+      },
+      "sidecarChanges": {
+        "TaskName": "Resting state with reverse blip."
+      }
+    },
+    {
+      "dataType": "sourcedata/func",
+      "modalityLabel": "bold",
+      "customLabels": "task-rest",
+      "criteria": {
+        "SeriesDescription": "Axial rsfMRI (Eyes Open)"
+      },
+      "sidecarChanges": {
+        "TaskName": "Resting state with eyes open."
+      }
+    },
+    {
+      "dataType": "fmap",
+      "modalityLabel": "fieldmap",
+      "customLabels": "acq-dwi",
+      "criteria": {
+        "SeriesDescription": "B0 Map - DTI - RKV",
+        "ImageType": [
+          "ORIGINAL",
+          "PRIMARY",
+          "OTHER",
+          "REAL",
+          "FIELDMAPHZ"
+        ]
+      }
+    },
+    {
+      "dataType": "fmap",
+      "modalityLabel": "magnitude",
+      "customLabels": "acq-dwi",
+      "criteria": {
+        "SeriesDescription": "B0 Map - DTI - RKV",
+        "ImageType": [
+          "ORIGINAL",
+          "PRIMARY",
+          "OTHER"
+        ]
+      }
+    },
+    {
+      "dataType": "fmap",
+      "modalityLabel": "fieldmap",
+      "customLabels": "acq-dwi",
+      "criteria": {
+        "SeriesDescription": "B0 Map - DTI",
+        "ImageType": [
+          "ORIGINAL",
+          "PRIMARY",
+          "OTHER",
+          "REAL",
+          "FIELDMAPHZ"
+        ]
+      }
+    },
+    {
+      "dataType": "fmap",
+      "modalityLabel": "magnitude",
+      "customLabels": "acq-dwi",
+      "criteria": {
+        "SeriesDescription": "B0 Map - DTI",
+        "ImageType": [
+          "ORIGINAL",
+          "PRIMARY",
+          "OTHER"
+        ]
+      }
+    },
+    {
+      "dataType": "fmap",
+      "modalityLabel": "fieldmap",
+      "customLabels": "acq-resting",
+      "criteria": {
+        "SeriesDescription": "B0 Map - rsfMRI",
+        "ImageType": [
+          "ORIGINAL",
+          "PRIMARY",
+          "OTHER",
+          "REAL",
+          "FIELDMAPHZ"
+        ]
+      }
+    },
+    {
+      "dataType": "fmap",
+      "modalityLabel": "magnitude",
+      "customLabels": "acq-resting",
+      "criteria": {
+        "SeriesDescription": "B0 Map - rsfMRI",
+        "ImageType": [
+          "ORIGINAL",
+          "PRIMARY",
+          "OTHER"
+        ]
+      }
+    },
+    {
+      "dataType": "fmap",
+      "modalityLabel": "fieldmap",
+      "customLabels": "acq-resting",
+      "criteria": {
+        "SeriesDescription": "B0 Map - rsfMRI - RKV",
+        "ImageType": [
+          "ORIGINAL",
+          "PRIMARY",
+          "OTHER",
+          "REAL",
+          "FIELDMAPHZ"
+        ]
+      }
+    },
+    {
+      "dataType": "fmap",
+      "modalityLabel": "magnitude",
+      "customLabels": "acq-resting",
+      "criteria": {
+        "SeriesDescription": "B0 Map - rsfMRI - RKV",
+        "ImageType": [
+          "ORIGINAL",
+          "PRIMARY",
+          "OTHER"
+        ]
+      }
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/464975691.svg)](https://zenodo.org/badge/latestdoi/464975691)
+
 # The NIMH Healthy Research Volunteer Dataset
 
 A comprehensive clinical, MRI, and MEG collection characterizing healthy research volunteers collected at the National Institute of Mental Health (NIMH) Intramural Research Program (IRP) in Bethesda, Maryland using clinical assessments such as assays of blood and urine, mental health assessments, diagnostic and dimensional measures of mental health, cognitive and neuropsychological functioning, structural and functional magnetic resonance imaging (MRI), along with diffusion tensor imaging (DTI), and a comprehensive magnetoencephalography battery (MEG).
@@ -44,18 +46,7 @@ Medical evaluation includes medical history elicitation and systematic review of
 
 ## MRI Scan
 
-Participants who were determined to be eligible for inclusion as healthy research volunteers based on the in-person assessment are given the option to consent for a magnetic resonance imaging (MRI) scan, which can serve as a baseline clinical scan to determine normative brain structure, and also as a research scan with the addition of functional sequences (resting state and diffusion tensor imaging). The MR protocol used was initially based on the ADNI-3 basic protocol, but was later modified to include portions of the ABCD protocol. Because there may be small changes in parameters from the standard ABCD/ADNI3 sequences, detailed sequence descriptions are shared in some_directory. Additional images collected with parameters inconsistent with the primary dataset are shared in the sourcedata directory with detailed .json files so that investigators can include them at their discretion. Scan types are as follows:
-
-- The T1 scan from ADNI3 (fSPGR) was acquired in 59 participants, while the T1 scan from ABCD (MPRAGE) was acquired in 89 participants.
-- The 2D FLAIR sequence from ADNI2 was acquired in 141 participants.
-- The 3D FLAIR sequence from ADNI3 was altered to match the resolution and geometry of the T1 scan, and was acquired in 36 participants (this scan was optional)
-- The ADNI3 T2* weighted scan was acquired in 150 participants
-- The 3D T2 weighted scan from the ABCD protocol, which is resolution and bandwidth matched to the T1 scan was acquired in 148 participants
-- The ADNI3 pCASL scan was altered to add fat saturation and was collected in 137 participants
-- The DTI scan from ADNI3 was modified to include the slice-select gradient reversal method (for 24 directions) and to turn reconstruction interpolation off. This was acquired in 129 participants. 
-- The eyes-open resting state from ADNI3 was modified to use a TE of 16.9ms and was acquired together with 1- phase-encoding reversed volumes in 127 participants.
-- Field maps for both DTI (B0 MAP DTI, N=62) and rsfMRI (B0 MAP rsfMRI, N=57) were added. 
-- Some images were acquired with and without GE’s proprietary surface coil intensity correction algorithm applied, these are designated “rec-scic” in the repository. 
+Participants who were determined to be eligible for inclusion as healthy research volunteers based on the in-person assessment are given the option to consent for a magnetic resonance imaging (MRI) scan, which can serve as a baseline clinical scan to determine normative brain structure, and also as a research scan with the addition of functional sequences (resting state and diffusion tensor imaging). The MR protocol used was initially based on the ADNI-3 basic protocol, but was later modified to include portions of the ABCD protocol. Because there may be small changes in parameters from the standard ABCD/ADNI3 sequences, detailed sequence descriptions are shared in some_directory. Additional images collected with parameters inconsistent with the primary dataset are shared in the sourcedata directory with detailed .json files so that investigators can include them at their discretion. 
 
 On the same visit as the MRI scan, volunteers are administered a subset of tasks from the NIH Toolbox Cognition Battery. The four tasks include:
 
@@ -125,7 +116,7 @@ Data collected by the NIMH MEG Core was converted to BIDS-standard files using t
 
 ### BIDS-standard MRI
 
-We used [dcm2bids v2.1.6](https://github.com/UNFmontreal/Dcm2Bids/releases/tag/2.1.6) tool, a wrapper built on [dcm2niix v1.0.20211006](https://github.com/rordenlab/dcm2niix/releases/tag/v1.0.20211006), to convert MRI DICOM files to BIDS-standard files. To preserve subject privacy, structural MRI scans are defaced using To preserve subject privacy, structural MRI scans are defaced using [AFNI Refacer version 2.31](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/tutorials/refacer/refacer_run.html) and defaced scans were checked for quality using [VisualQC v0.6](https://github.com/raamana/visualqc).
+We used [dcm2bids v2.1.6](https://github.com/UNFmontreal/Dcm2Bids/releases/tag/2.1.6) tool, a wrapper built on [dcm2niix v1.0.20211006](https://github.com/rordenlab/dcm2niix/releases/tag/v1.0.20211006), to convert MRI DICOM files to BIDS-standard files. To preserve subject privacy, structural MRI scans are defaced using To preserve subject privacy, structural MRI scans are defaced using [AFNI Refacer version 2.31](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/tutorials/refacer/refacer_run.html) and defaced scans were checked for quality using [VisualQC v0.6.1](https://github.com/raamana/visualqc).
 
 **NOTE** Release 1.0.0 of the dataset contains ASL scans but are *NOT* in BIDS format yet. This will be resolved in future releases.
 

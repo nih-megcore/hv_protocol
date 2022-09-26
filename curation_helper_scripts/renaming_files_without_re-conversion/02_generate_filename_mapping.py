@@ -25,9 +25,9 @@ def parse_arguments():
     args = parser.parse_args()
 
     # converting relative to absolute paths
-    inputdir = Path(os.path.abspath(args.inputdir))
-    series_to_files = Path(os.path.abspath(args.series_to_files))
-    outdir = Path(os.path.abspath(args.outdir))
+    inputdir = Path(args.inputdir).resolve()
+    series_to_files = Path(args.series_to_files).resolve()
+    outdir = Path(args.outdir).resolve()
 
     return inputdir, series_to_files, outdir
 
@@ -45,8 +45,9 @@ def main():
 
     df_columns = ['original_series_description', 'modified_series_description', 'current_bids_filename',
                   'revised_common_identifiers', 'revised_bids_filename']
-    df = pd.DataFrame(columns=df_columns)
-    idx = 0
+    df = pd.DataFrame(columns=df_columns) # initializing dataframe with column names
+    idx = 0 # df rowidx 
+    
     for series_filename in series_filenames:
         desc = series_filename.name.split('.')[0]
         print(desc)
@@ -60,25 +61,30 @@ def main():
                     startidx = i + 1
 
             rel_filepath = '/'.join(abs_path_parts[startidx:])
-            df.at[idx, 'current_bids_filename'] = rel_filepath
+            df.at[idx, 'current_bids_filename'] = rel_filepath 
             df.at[idx, 'modified_series_description'] = desc
             idx += 1
 
     # series description to unique identifier mapping file
     series_to_identifier_df = pd.read_csv(data_dir.joinpath('series_descriptions_to_new_common_identifiers.csv'))
-
     grouped_df = df.groupby(by=['modified_series_description'])
     unique_series_desc = grouped_df.groups.keys()
+    
     for series_desc in unique_series_desc:
         for idx in grouped_df.groups[series_desc]:
             curr_filename = df.at[idx, 'current_bids_filename']
-            prefix = '_'.join(curr_filename.split('_')[:2])
+            prefix = '_'.join(curr_filename.split('_')[:2]) # subject-session prefix
             print(prefix)
-            entities = re.split('/|_', curr_filename)
-
+            entities = re.split('/|_', curr_filename) # bids filename entities
+            
+            # modified series descriptions are machine readable versions of original series descriptions, where spaces and brace characters '(',')'
+            # are replaced by '_'. Here, we are populating are new dataframe with original series description based on text filenames aka modified
+            # series descriptions.
             df.at[idx, 'original_series_description'] = series_to_identifier_df.loc[series_to_identifier_df[
                                                                                         'modified_series_description'] == series_desc, 'original_series_description'].values[
                 0]
+            
+            # a common identifier is a chain of entities after sub and ses in a bids filename for scans having the same series description.
             new_common_identifier = series_to_identifier_df.loc[series_to_identifier_df[
                                                                     'modified_series_description'] == series_desc, 'revised_common_identifiers'].values[
                 0].strip('_')
