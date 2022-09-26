@@ -1,0 +1,3 @@
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON48555/ses-01/anat/sub-ON48555_ses-01_acq-2d_rec-scic_FLAIR
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-2d_rec-scic_FLAIR
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-2d_rec-scic_FLAIR

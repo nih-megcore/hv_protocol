@@ -1,0 +1,1 @@
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sourcedata/sub-ON65697/ses-01/func/sub-ON65697_ses-01_task-rest_dir-reverse_bold

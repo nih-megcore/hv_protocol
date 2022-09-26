@@ -1,0 +1,2 @@
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sub-ON59735/ses-01/anat/sub-ON59735_ses-01_acq-2d_rec-scic_FLAIR
+/data/BrainBlocks/joyce/dcm2bids_2022_05_12/sub-ON65697/ses-01/anat/sub-ON65697_ses-01_acq-2d_rec-scic_FLAIR
