@@ -1,0 +1,41 @@
+Series Description	Modality	Filename Pattern	Location	Participant Count	Scan Count
+Accelerated Sagittal IR-FSPGR	T1w	{'acq-FSPGR_rec-SCIC_run-01_T1w', 'acq-FSPGR_rec-SCIC_T1w', 'acq-FSPGR_rec-SCIC_run-02_T1w'}	Main	62	63
+ORIG Anat T1w MP-RAGE 1mm (ABCD)	T1w	{'acq-MPRAGE_T1w'}	Main	89	89
+Anat T1w MP-RAGE 1mm (ABCD)	T1w	{'acq-MPRAGE_rec-SCIC_T1w'}	Main	89	89
+ORIG Sag_MPRAGE_T1	T1w	{'acq-SagittalMPRAGE_T1w'}	Sourcedata	4	4
+PURE MP-RAGE 1mm	T1w	{'acq-MPRAGE_rec-SCIC_T1w'}	Sourcedata	2	2
+Ax T2 FLAIR	FLAIR	{'acq-VariableTE_rec-SCIC_FLAIR'}	Main	3	3
+Axial T2 2D FLAIR	FLAIR	{'acq-2d_rec-SCIC_FLAIR'}	Main	9	9
+Axial T2 2D FLAIR ADNI2	FLAIR	{'acq-2dADNI2_rec-SCIC_FLAIR'}	Main	144	144
+ORIG Axial T2 2D FLAIR ADNI2	FLAIR	{'acq-2dADNI2_FLAIR'}	Main	3	3
+ADNI2 2D FLAIR	FLAIR	{'acq-2dADNI2_rec-SCIC_FLAIR'}	Main	2	2
+ORIG ADNI2 2D FLAIR	FLAIR	{'acq-2dADNI2_FLAIR'}	Main	2	2
+ORIG Optional - Anat T2w CUBE FLAIR	FLAIR	{'acq-3dCUBE_FLAIR'}	Main	25	25
+Optional - Anat T2w CUBE FLAIR	FLAIR	{'acq-3dCUBE_rec-SCIC_FLAIR'}	Main	25	25
+Optional - Sagittal 3D FLAIR	FLAIR	{'acq-Sagittal3d_rec-SCIC_FLAIR'}	Main	13	13
+Sagittal 3D FLAIR	FLAIR	{'acq-Sagittal3d_rec-SCIC_FLAIR'}	Main	9	9
+ORIG Anat T2w CUBE (ABCD)	T2w	{'acq-CUBE_T2w'}	Main	89	89
+Anat T2w CUBE (ABCD)	T2w	{'acq-CUBE_rec-SCIC_T2w'}	Main	89	89
+Sag_CUBE_T2	T2w	{'acq-CUBE_T2w'}	Main	64	64
+Axial T2 Star	T2starw	{'rec-SCIC_T2starw'}	Main	147	147
+Axial T2 Star (Rx 2D FLAIR)	T2starw	{'rec-SCIC_T2starw'}	Main	8	8
+Axial 3D pCASL (Eyes Open)	asl	{'asl'}	Main	12	12
+Axial 3D pCASL with Eyes Open	asl	{'asl'}	Main	142	142
+Axial DTI	dwi	{'dir-flipped_dwi'}	Main	1	1
+Axial DTI - swap pepolar CV	dwi	{'dir-unflipped_dwi'}	Main	1	1
+Axial DTI 24vols flipped	dwi	{'dir-unflipped_dwi'}	Main	2	2
+Axial DTI 24dirs flipped	dwi	{'dir-unflipped_dwi'}	Main	2	2
+Axial DTI 24dir flipped	dwi	{'dir-unflipped_dwi'}	Main	1	1
+Axial DTI B=1000	dwi	{'dir-flipped_dwi'}	Main	10	10
+Axial DTI B 1000	dwi	{'dir-flipped_dwi'}	Main	9	9
+Axial DTI 24dirs flipped - RKV	dwi	{'dir-unflipped_dwi'}	Main	143	143
+Axial DTI B 1000 - RKV	dwi	{'dir-flipped_dwi'}	Main	134	134
+Axial rsfMRI (Eyes Open)	bold	{'task-rest_dir-forward_bold', 'task-rest_dir-forward_run-02_bold', 'task-rest_dir-forward_run-01_bold'}	Main	11	12
+Axial fMRI reverse blip	bold	{'task-rest_dir-reverse_bold'}	Main	1	1
+Axial rsfMRI with Eyes Open - RKV	bold	{'task-rest_dir-forward_bold'}	Main	130	130
+Axial rsfMRI reverse blip - RKV	bold	{'task-rest_dir-reverse_bold'}	Main	129	129
+B0 Map - DTI	fieldmap	{'acq-dwi_fieldmap'}	Main	11	11
+B0 Map - DTI - RKV	fieldmap	{'acq-dwi_fieldmap'}	Main	55	55
+B0 Map - rsfMRI	fieldmap	{'acq-bold_fieldmap'}	Main	11	11
+B0 Map - rsfMRI - RKV	fieldmap	{'acq-bold_fieldmap'}	Main	48	48
+HighResHippo	T1w	{'acq-HighResHippo_T1w'}	Sourcedata	2	2

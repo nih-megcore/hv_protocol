@@ -12,16 +12,19 @@ def parse_arguments():
                                                  "These files contain a list of scan names associated with "
                                                  "the series description.")
 
-    parser.add_argument("-i", "--input-dir", type=Path, action='store', dest='inputdir', metavar='INPUT', help="Path to input directory.")
-    parser.add_argument("-o", "--output-dir", type=Path, action='store', dest='outdir', metavar='OUTPUT', help="Path to output directory.")
-    parser.add_argument("-s", "--series-desc-list", type=Path, action='store', dest='outdir', metavar='FILE', help="Path to series description list file.")
+    parser.add_argument("-i", "--input-dir", type=Path, action='store', dest='inputdir', metavar='INPUT',
+                        help="Path to input directory with current filenames.")
+    parser.add_argument("-o", "--output-dir", type=Path, action='store', dest='outdir', metavar='OUTPUT',
+                        help="Path to directory where outputs of this script will be stored.")
+    parser.add_argument("-s", "--series-desc-list", type=Path, action='store', dest='series_desc_file', metavar='FILE',
+                        help="Path to series description list file.")
 
     args = parser.parse_args()
 
     # converting relative to absolute paths
-    inputdir = Path(os.path.abspath(args.inputdir))
-    outdir = Path(os.path.abspath(args.outdir))
-    series_desc_file = Path(os.path.abspath(args.series_desc_file))
+    inputdir = Path(args.inputdir).resolve()
+    outdir = Path(args.outdir).resolve()
+    series_desc_file = Path(args.series_desc_file).resolve()
 
     return inputdir, outdir, series_desc_file
 

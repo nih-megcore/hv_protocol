@@ -3485,14 +3485,14 @@ sub-ON94856/ses-01/anat/sub-ON94856_ses-01_acq-3d_FLAIR.nii.gz,sub-ON94856/ses-0
 sub-ON94856/ses-01/anat/sub-ON94856_ses-01_acq-3d_FLAIR.json,sub-ON94856/ses-01/anat/sub-ON94856_ses-01_acq-3dCUBE_FLAIR.json
 sub-ON99620/ses-01/anat/sub-ON99620_ses-01_acq-3d_FLAIR.nii.gz,sub-ON99620/ses-01/anat/sub-ON99620_ses-01_acq-3dCUBE_FLAIR.nii.gz
 sub-ON99620/ses-01/anat/sub-ON99620_ses-01_acq-3d_FLAIR.json,sub-ON99620/ses-01/anat/sub-ON99620_ses-01_acq-3dCUBE_FLAIR.json
-sourcedata/sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-mprage_T1w.nii.gz,sourcedata/sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-SagittalMPRAGE_T1w.nii.gz
-sourcedata/sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-mprage_T1w.json,sourcedata/sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-SagittalMPRAGE_T1w.json
-sourcedata/sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-mprage_T1w.nii.gz,sourcedata/sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-SagittalMPRAGE_T1w.nii.gz
-sourcedata/sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-mprage_T1w.json,sourcedata/sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-SagittalMPRAGE_T1w.json
-sourcedata/sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-mprage_T1w.nii.gz,sourcedata/sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-SagittalMPRAGE_T1w.nii.gz
-sourcedata/sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-mprage_T1w.json,sourcedata/sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-SagittalMPRAGE_T1w.json
-sourcedata/sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-mprage_T1w.nii.gz,sourcedata/sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-SagittalMPRAGE_T1w.nii.gz
-sourcedata/sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-mprage_T1w.json,sourcedata/sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-SagittalMPRAGE_T1w.json
+sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-mprage_T1w.nii.gz,sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-SagittalMPRAGE_T1w.nii.gz
+sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-mprage_T1w.json,sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-SagittalMPRAGE_T1w.json
+sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-mprage_T1w.nii.gz,sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-SagittalMPRAGE_T1w.nii.gz
+sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-mprage_T1w.json,sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-SagittalMPRAGE_T1w.json
+sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-mprage_T1w.nii.gz,sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-SagittalMPRAGE_T1w.nii.gz
+sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-mprage_T1w.json,sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-SagittalMPRAGE_T1w.json
+sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-mprage_T1w.nii.gz,sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-SagittalMPRAGE_T1w.nii.gz
+sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-mprage_T1w.json,sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-SagittalMPRAGE_T1w.json
 sub-ON02747/ses-01/anat/sub-ON02747_ses-01_acq-3d_rec-scic_FLAIR.nii.gz,sub-ON02747/ses-01/anat/sub-ON02747_ses-01_acq-3dCUBE_rec-SCIC_FLAIR.nii.gz
 sub-ON02747/ses-01/anat/sub-ON02747_ses-01_acq-3d_rec-scic_FLAIR.json,sub-ON02747/ses-01/anat/sub-ON02747_ses-01_acq-3dCUBE_rec-SCIC_FLAIR.json
 sub-ON05530/ses-01/anat/sub-ON05530_ses-01_acq-3d_rec-scic_FLAIR.nii.gz,sub-ON05530/ses-01/anat/sub-ON05530_ses-01_acq-3dCUBE_rec-SCIC_FLAIR.nii.gz
@@ -3701,6 +3701,14 @@ sub-ON99299/ses-01/anat/sub-ON99299_ses-01_acq-cube_T2w.nii.gz,sub-ON99299/ses-0
 sub-ON99299/ses-01/anat/sub-ON99299_ses-01_acq-cube_T2w.json,sub-ON99299/ses-01/anat/sub-ON99299_ses-01_acq-CUBE_T2w.json
 sub-ON99871/ses-01/anat/sub-ON99871_ses-01_acq-cube_T2w.nii.gz,sub-ON99871/ses-01/anat/sub-ON99871_ses-01_acq-CUBE_T2w.nii.gz
 sub-ON99871/ses-01/anat/sub-ON99871_ses-01_acq-cube_T2w.json,sub-ON99871/ses-01/anat/sub-ON99871_ses-01_acq-CUBE_T2w.json
+"sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-SagittalMPRAGE_rec-SCIC.json:	""SeriesDescription"": ""Sag_MPRAGE_T1"",.nii.gz",sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-SagittalMPRAGE_rec-SCIC_T1w.nii.gz
+"sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-SagittalMPRAGE_rec-SCIC.json:	""SeriesDescription"": ""Sag_MPRAGE_T1"",.json",sub-ON69092/ses-01/anat/sub-ON69092_ses-01_acq-SagittalMPRAGE_rec-SCIC_T1w.json
+"sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-SagittalMPRAGE_rec-SCIC.json:	""SeriesDescription"": ""Sag_MPRAGE_T1"",.nii.gz",sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-SagittalMPRAGE_rec-SCIC_T1w.nii.gz
+"sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-SagittalMPRAGE_rec-SCIC.json:	""SeriesDescription"": ""Sag_MPRAGE_T1"",.json",sub-ON82948/ses-01/anat/sub-ON82948_ses-01_acq-SagittalMPRAGE_rec-SCIC_T1w.json
+"sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-SagittalMPRAGE_rec-SCIC.json:	""SeriesDescription"": ""Sag_MPRAGE_T1"",.nii.gz",sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-SagittalMPRAGE_rec-SCIC_T1w.nii.gz
+"sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-SagittalMPRAGE_rec-SCIC.json:	""SeriesDescription"": ""Sag_MPRAGE_T1"",.json",sub-ON87538/ses-01/anat/sub-ON87538_ses-01_acq-SagittalMPRAGE_rec-SCIC_T1w.json
+"sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-SagittalMPRAGE_rec-SCIC.json:	""SeriesDescription"": ""Sag_MPRAGE_T1"",.nii.gz",sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-SagittalMPRAGE_rec-SCIC_T1w.nii.gz
+"sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-SagittalMPRAGE_rec-SCIC.json:	""SeriesDescription"": ""Sag_MPRAGE_T1"",.json",sub-ON98806/ses-01/anat/sub-ON98806_ses-01_acq-SagittalMPRAGE_rec-SCIC_T1w.json
 sourcedata/sub-ON17159/ses-01/anat/sub-ON17159_ses-01_acq-3d_rec-scic_FLAIR.nii.gz,sourcedata/sub-ON17159/ses-01/anat/sub-ON17159_ses-01_acq-Sagittal3d_rec-SCIC_FLAIR.nii.gz
 sourcedata/sub-ON17159/ses-01/anat/sub-ON17159_ses-01_acq-3d_rec-scic_FLAIR.json,sourcedata/sub-ON17159/ses-01/anat/sub-ON17159_ses-01_acq-Sagittal3d_rec-SCIC_FLAIR.json
 sourcedata/sub-ON23483/ses-01/anat/sub-ON23483_ses-01_acq-3d_rec-scic_FLAIR.nii.gz,sourcedata/sub-ON23483/ses-01/anat/sub-ON23483_ses-01_acq-Sagittal3d_rec-SCIC_FLAIR.nii.gz
