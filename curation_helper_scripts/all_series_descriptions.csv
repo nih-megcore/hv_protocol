@@ -1,0 +1,41 @@
+series_description,modality
+Accelerated Sagittal IR-FSPGR,T1w
+ORIG Anat T1w MP-RAGE 1mm (ABCD),T1w
+Anat T1w MP-RAGE 1mm (ABCD),T1w
+ORIG Sag_MPRAGE_T1,T1w
+PURE MP-RAGE 1mm,T1w
+Ax T2 FLAIR,FLAIR
+Axial T2 2D FLAIR,FLAIR
+Axial T2 2D FLAIR ADNI2,FLAIR
+ORIG Axial T2 2D FLAIR ADNI2,FLAIR
+ADNI2 2D FLAIR,FLAIR
+ORIG ADNI2 2D FLAIR,FLAIR
+ORIG Optional - Anat T2w CUBE FLAIR,FLAIR
+Optional - Anat T2w CUBE FLAIR,FLAIR
+Optional - Sagittal 3D FLAIR,FLAIR
+Sagittal 3D FLAIR,FLAIR
+ORIG Anat T2w CUBE (ABCD),T2w
+Anat T2w CUBE (ABCD),T2w
+Sag_CUBE_T2,T2w
+Axial T2 Star,T2starw
+Axial T2 Star (Rx 2D FLAIR),T2starw
+Axial 3D pCASL (Eyes Open),asl
+Axial 3D pCASL with Eyes Open,asl
+Axial DTI,dwi
+Axial DTI - swap pepolar CV,dwi
+Axial DTI 24vols flipped,dwi
+Axial DTI 24dirs flipped,dwi
+Axial DTI 24dir flipped,dwi
+Axial DTI B=1000,dwi
+Axial DTI B 1000,dwi
+Axial DTI 24dirs flipped - RKV,dwi
+Axial DTI B 1000 - RKV,dwi
+Axial rsfMRI (Eyes Open),bold
+Axial fMRI reverse blip,bold
+Axial rsfMRI with Eyes Open - RKV,bold
+Axial rsfMRI reverse blip - RKV,bold
+B0 Map - DTI,fieldmap
+B0 Map - DTI - RKV,fieldmap
+B0 Map - rsfMRI,fieldmap
+B0 Map - rsfMRI - RKV,fieldmap
+HighResHippo,T1w

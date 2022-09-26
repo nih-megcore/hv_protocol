@@ -2,6 +2,7 @@ Accelerated Sagittal IR-FSPGR
 ORIG Anat T1w MP-RAGE 1mm (ABCD)
 Anat T1w MP-RAGE 1mm (ABCD)
 ORIG Sag_MPRAGE_T1
+Sag_MPRAGE_T1
 PURE MP-RAGE 1mm
 Ax T2 FLAIR
 Axial T2 2D FLAIR
