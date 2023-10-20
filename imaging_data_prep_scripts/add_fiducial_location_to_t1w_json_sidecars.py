@@ -49,7 +49,7 @@ def main():
         entities = sidecar.name.split('_')
         dest_jsons = list(bids_dir.joinpath(entities[0], entities[1], 'anat').glob('*T1w.json'))
         for dest_json in dest_jsons:
-            add_key_to_sidecar(dest_json, 'AnatomicalLandmarkCoordinates', )
+            add_key_to_sidecar(sidecar, dest_json, 'AnatomicalLandmarkCoordinates')
 
 
 if __name__ == "__main__":
