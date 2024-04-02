@@ -38,20 +38,20 @@ if __name__ == "__main__":
 
     # reading in CTDB data as a dictionary of dataframes. Each dataframe contains responses to questionnaires.
     # 'SUBJECT_NUMBER' field contains the RVIDs of the participants. 
-    ctdb_all_df = pd.read_excel(rvdef.filepaths.ctdb_data_dir, skiprows=[1], sheet_name=None)
+    ctdb_all_df = pd.read_excel(rvdef.filepaths.ctdb_data_dir, skiprows=[0], sheet_name=None)
     onid_mapping = {}
     unique_rvids_in_data = set()  # set of unique RVol IDs
 
     # crawl through all ctdb forms to find list of unique RVIDs
     for form, df in ctdb_all_df.items():
-        df['participant_id'] = df[' ']
-        del df[' ']
+        df['participant_id'] = df['SUBJECT_NUMBER']
+        # del df[' ']
         for ind, snum in df['participant_id'].items():
             unique_rvids_in_data.add(snum)
 
     print(f'No. of unique subjects across CTDB questionnaires is {len(unique_rvids_in_data)}')
     unique_rvids_in_id_file = id_linking_df['SUBJECT_NUMBER']
-    existing_onids = id_linking_df['open_neuro_id'].tolist()
+    existing_onids = id_linking_df['openneuro_id'].tolist()
 
     # gives a list of rvids in ctdb data NOT present in id_linking_file
     no_onids_subjs = np.setdiff1d(list(unique_rvids_in_data), unique_rvids_in_id_file).tolist()
@@ -64,7 +64,7 @@ if __name__ == "__main__":
         and find a resolution before proceeding')
     else:
         for ind, rvid in unique_rvids_in_id_file.items():
-            onid_mapping[rvid] = id_linking_df.at[ind, 'open_neuro_id']
+            onid_mapping[rvid] = id_linking_df.at[ind, 'openneuro_id']
 
         if no_onids_subjs:
             for rvid in no_onids_subjs:
@@ -76,8 +76,10 @@ if __name__ == "__main__":
     timestr = time.strftime('%Y%m%d_%H%M%S')
     with open(fspath(rvdef.filepaths.data_dir.joinpath('id_files', 'id_linking_file_' + timestr + '.csv')), 'w',
               newline='') as csvfile:
-        header = ['SUBJECT_NUMBER', 'open_neuro_id']
+        header = ['SUBJECT_NUMBER', 'openneuro_id']
         writer = csv.DictWriter(csvfile, fieldnames=header)
         writer.writeheader()
         for key, value in onid_mapping.items():
-            writer.writerow({'SUBJECT_NUMBER': key, 'open_neuro_id': value})
+            if not key.startswith('RV'):
+                print(key)
+            writer.writerow({'SUBJECT_NUMBER': key, 'openneuro_id': value})

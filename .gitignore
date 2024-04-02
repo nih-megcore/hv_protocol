@@ -1,3 +1,5 @@
 *.ipynb
 imaging_data_prep_scripts/defacing_scripts/*.ipynb
 imaging_data_prep_scripts/defacing_scripts/scripts_output*
+*/__pycache__/
+__pycache__/*
