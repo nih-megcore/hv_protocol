@@ -85,7 +85,7 @@ if __name__ == "__main__":
     # # step 1
     # # reading ctdb spreadsheets & id mapping files into pandas dataframe
     id_linking_df = pd.read_csv(filepaths.id_filepath, low_memory=False)
-    ctdb_dict_of_dfs = pd.read_excel(filepaths.ctdb_data_dir, sheet_name=None)
+    ctdb_dict_of_dfs = pd.read_excel(filepaths.ctdb_data_dir, sheet_name=None, skiprows=[0])
     legends = pd.read_excel(filepaths.ctdb_legends_dir, sheet_name=None)  # dict of dfs
     form_names_mapping = json.load(
         open(fspath(filepaths.data_dir.joinpath('mappings/ctdb_formnames_mapping.json')), 'r'))
@@ -111,17 +111,15 @@ if __name__ == "__main__":
 
     # renaming zeroth row empty columns
     for form, df in ctdb_dict_of_dfs.items():
-
+        print(form)
         # cleaning up multiple responses in ctdb dict of dfs
         if form not in dont_care:
-            df = df[[cols_with_demo_info['SUBJECT_NUMBER'], cols_with_demo_info['LAST_NAME'],
-                     cols_with_demo_info['FIRST_NAME'], cols_with_demo_info['SEX'], cols_with_demo_info['AGE'],
-                     cols_with_demo_info['VISIT_DATE']]]
-            for idx, rvid in df[cols_with_demo_info['SUBJECT_NUMBER']].items():
+            for idx, rvid in df['SUBJECT_NUMBER'].items():
+                print(rvid)
                 onid = rvdef.openneuro_id_lookup(rvid)
                 if onid in superdupes:
-                    fduplicates_2021[form][rvid].append([df.at[idx, cols_with_demo_info['AGE']],
-                                                         df.at[idx, cols_with_demo_info['VISIT_DATE']],
+                    fduplicates_2021[form][rvid].append([df.at[idx, 'AGE_AT_VISIT'],
+                                                         df.at[idx, 'VISIT_DATE'],
                                                          idx])
             # print(fduplicates_2021)
             for rvid, datalist in fduplicates_2021[form].items():

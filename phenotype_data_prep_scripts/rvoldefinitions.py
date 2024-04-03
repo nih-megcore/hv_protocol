@@ -19,13 +19,13 @@ combined_forms = ['ehi.tsv', 'ehi_r.tsv', 'whodas.tsv', 'whodas_r.tsv', 'demogra
 # definitions used for data cleaning
 def openneuro_id_lookup(rvid):
     """given a rvid return the corresponding openneuro id"""
-    onid = id_mapping.loc[id_mapping['SUBJECT_NUMBER'] == rvid, 'open_neuro_id'].values[0]
+    onid = id_mapping.loc[id_mapping['SUBJECT_NUMBER'] == rvid, 'openneuro_id'].values[0]
     return onid
 
 
 def rvid_lookup(onid):
     """given an openneuro_id return the corresponding rvid"""
-    rvid = id_mapping.loc[id_mapping['open_neuro_id'] == onid, 'SUBJECT_NUMBER'].values[0]
+    rvid = id_mapping.loc[id_mapping['openneuro_id'] == onid, 'SUBJECT_NUMBER'].values[0]
     return rvid
 
 
@@ -325,8 +325,8 @@ def combine_ehi():
     for col in combined_df.columns.tolist()[1:]:
         combined_df[col] = combined_df[col].astype(int)
     new_combined_header = \
-    pd.read_csv(filepaths.data_dir.joinpath('survey_combinations_data/ehi_columns_order.csv'), header=None)[
-        0].values.tolist()
+        pd.read_csv(filepaths.data_dir.joinpath('survey_combinations_data/ehi_columns_order.csv'), header=None)[
+            0].values.tolist()
     combined_df.columns = new_combined_header
     combined_df = combined_df.sort_values(by=['participant_id'], ignore_index=True)
     combined_df.to_csv(fspath(filepaths.ctdb_out_dir.joinpath('ehi_combined.tsv')), sep='\t', quoting=csv.QUOTE_MINIMAL,
