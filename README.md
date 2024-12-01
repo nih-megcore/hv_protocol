@@ -6,7 +6,7 @@ A comprehensive clinical, MRI, and MEG collection characterizing healthy researc
 
 In addition, blood samples of healthy volunteers are banked for future genetic analyses. All data collected in this protocol are broadly shared here, in the Brain Imaging Data Structure (BIDS) format. In addition, task paradigms and basic pre-processing scripts are shared on [GitHub](https://github.com/nih-megcore/hv_protocol). There are currently few open access MEG datasets, and multimodal neuroimaging datasets are even rarer. Due to its depth of characterization of a healthy population in terms of brain health, this dataset may contribute to a wide array of secondary investigations of non-clinical and clinical research questions.
 
-This dataset is licensed under the [Creative Commons Zero (CC0) v1.0 License](https://creativecommons.org/publicdomain/zero/1.0/).
+This dataset is licensed under the [Creative Commons Zero (CC0) v1.0 License](https://creativecommons.org/publicdomain/zero/1.0/), and is available for download on OpenNeuro at https://openneuro.org/datasets/ds004215/
 
 ## Recruitment
 
@@ -123,6 +123,8 @@ We used [dcm2bids v2.1.6](https://github.com/UNFmontreal/Dcm2Bids/releases/tag/2
 The `imaging_data_prep_scripts` directory contains scripts and files used to process raw MRI and MEG data.
 
 ### OpenNeuro BIDS File/Folder Tree
+
+This dataset (identifier `ds004215`) is shared on OpenNeuro at https://openneuro.org/datasets/ds004215/
 
 Below is a BIDS-compliant file/folder tree as it appears for subjects on OpenNeuro.
 
